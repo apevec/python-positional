@@ -5,13 +5,13 @@
 %endif
 
 Name:           python-%{pypi_name}
-Version:        1.0.1
-Release:        4%{?dist}
+Version:        1.1.1
+Release:        1%{?dist}
 Summary:        Library to enforce positional or keyword arguments
 
 License:        ASL 2.0
 URL:            https://github.com/morganfainberg/positional
-Source0:        https://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  git
@@ -97,6 +97,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Wed Aug 17 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.1.1-1
+- Upstream 1.1.1
+
 * Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.1-4
 - https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
 
