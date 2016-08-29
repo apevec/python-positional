@@ -6,7 +6,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.1.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Library to enforce positional or keyword arguments
 
 License:        ASL 2.0
@@ -24,6 +24,7 @@ A decorator which enforces only some args may be passed positionally.x
 Summary:        Library to enforce positional or keyword arguments
 %{?python_provide:%python_provide python2-%{pypi_name}}
 
+Requires:       python-wrapt
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 BuildRequires:  python-pbr >= 1.8
@@ -37,6 +38,7 @@ A decorator which enforces only some args may be passed positionally.
 Summary:        Library to enforce positional or keyword arguments
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
+Requires:       python3-wrapt
 BuildRequires:  python3-devel
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-pbr >= 1.8
@@ -97,6 +99,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html
 
 %changelog
+* Mon Aug 29 2016 Alan Pevec <apevec AT redhat.com> - 1.1.1-2
+- Add wrapt dependency
+
 * Wed Aug 17 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.1.1-1
 - Upstream 1.1.1
 
